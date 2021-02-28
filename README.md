@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  The pomodoro tecnique + exercises = healthily
+  The pomodoro tecnique + exercises = healthier
 </p>
 
 
