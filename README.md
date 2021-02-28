@@ -45,15 +45,15 @@ A few of the things you can do with GitPoint:
 * New challenge notification
 
 <p align="center">
-  <img src = "./github/features-imgs/home.png" width=700>
+  <img src = "/.github/features-imgs/home.png" width=700>
 </p>
 
 <p align="center">
-  <img src = "./github/features-imgs/challenge.png" width=700>
+  <img src = "/.github/features-imgs/challenge.png" width=700>
 </p>
 
 <p align="center">
-  <img src = "./github/features-imgs/notification.png" width=700>
+  <img src = "/.github/features-imgs/notification.png" width=700>
 </p>
 
 ## How To Use
