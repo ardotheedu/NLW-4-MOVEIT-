@@ -53,6 +53,7 @@
     transform: translateX(-50%);
     margin-bottom: 1.25rem;
 }
-.page aside main a:link:active > svg{
-    color:purple;
+.page aside main a > svg {
+    border-left: #2E384D 4px solid;
+    border-radius: 0 100% 100% 0;
 }
