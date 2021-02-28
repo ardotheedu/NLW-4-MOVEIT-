@@ -51,5 +51,8 @@
     width: 2rem;
     height: 2rem;
     transform: translateX(-50%);
-    margin-bottom: 1.25rem
+    margin-bottom: 1.25rem;
+}
+.page aside main a:link:active > svg{
+    color:purple;
 }
