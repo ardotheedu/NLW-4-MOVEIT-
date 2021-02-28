@@ -8,6 +8,8 @@
     flex-direction: column;
 }
 
+
+
 .container  section {
     flex: 1;
     display: grid;
@@ -17,3 +19,37 @@
 }
 
   
+
+.page {
+    width: 100vw;
+    height: 100vh;
+
+    position: relative;
+    display: flex;
+}
+
+.page aside {
+    width: 4rem;
+    background: #ffff;
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.page aside header > img{
+    transform: translatex(-50%);
+}
+
+.page aside main{
+    transform: translateY(-150%);
+}
+
+
+.page aside main a > svg{
+    width: 2rem;
+    height: 2rem;
+    transform: translateX(-50%);
+    margin-bottom: 1.25rem
+}
