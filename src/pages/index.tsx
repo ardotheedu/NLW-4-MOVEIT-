@@ -38,7 +38,7 @@ export default function Home(props: HomeProps) {
 
                 <main>
                   <a href="/">
-                    <BiHomeAlt style={{ color: '#2E384D' }}/>
+                    <BiHomeAlt />
                   </a>
                   <a href="/logged">
                     <FiAward  />
