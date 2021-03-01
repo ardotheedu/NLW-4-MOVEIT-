@@ -33,7 +33,7 @@ Here is a working live demo: https://nlw-4-moveit-fawn.vercel.app
 
 ## Features
 
-A few of the things you can do with GitPoint:
+A few of the things you can do with move.it:
 
 * See your current experience
 * How many xp you need to the next level
