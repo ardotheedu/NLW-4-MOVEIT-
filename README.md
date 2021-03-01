@@ -4,7 +4,7 @@
 </p>
 
 <p align="center">
-  The pomodoro tecnique + exercises = healthily
+  The pomodoro tecnique + exercises = healthier
 </p>
 
 
@@ -29,7 +29,7 @@ The move.it it's an app which combine the Pomodoro tecnique and exercise for tho
 
 ## Demo
 
-Here is a working live demo: https://moveit-next-taupe-three.vercel.app
+Here is a working live demo: https://nlw-4-moveit-fawn.vercel.app
 
 ## Features
 
@@ -45,15 +45,15 @@ A few of the things you can do with GitPoint:
 * New challenge notification
 
 <p align="center">
-  <img src = "./github/features-imgs/home.png" width=700>
+  <img src = "/.github/features-imgs/home.png" width=700>
 </p>
 
 <p align="center">
-  <img src = "./github/features-imgs/challenge.png" width=700>
+  <img src = "/.github/features-imgs/challenge.png" width=700>
 </p>
 
 <p align="center">
-  <img src = "./github/features-imgs/notification.png" width=700>
+  <img src = "/.github/features-imgs/notification.png" width=700>
 </p>
 
 ## How To Use
