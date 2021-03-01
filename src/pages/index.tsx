@@ -13,8 +13,7 @@ import { ChallengeBox } from '../components/ChallengeBox'
 import styles from '../styles/pages/Home.module.css'
 import { ChallengesProvider } from '../contexts/ChallengesContext'
 
-import {BiHomeAlt} from 'react-icons/bi'
-import {FiAward} from 'react-icons/fi'
+import { SideBar } from '../components/SideBar'
 
 
 interface HomeProps {
@@ -31,20 +30,8 @@ export default function Home(props: HomeProps) {
       challengeCompleted={props.challengeCompleted}
     > 
       <div className={styles.page}>
-            <aside>
-                <header>
-                    <img src="/icons/logo.svg" alt="move.it logo"/>
-                </header>
-
-                <main>
-                  <a href="/">
-                    <BiHomeAlt />
-                  </a>
-                  <a href="/logged">
-                    <FiAward  />
-                  </a>
-                </main>
-            </aside>
+            <SideBar />
+            
             <div className={styles.container}> 
               <Head>
                 <title>Inicio | move.it</title>

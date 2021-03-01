@@ -1,0 +1,42 @@
+.container {
+    display: flex;
+}
+.container aside {
+    width: 4rem;
+    background: #ffff;
+    padding: 3rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container aside header > img{
+    transform: translatex(-50%);
+}
+
+.container aside main{
+    transform: translateY(-150%);
+}
+
+
+.container aside main a > svg {
+    width: 2rem;
+    height: 2rem;
+    transform: translateX(-50%);
+    margin-bottom: 1.25rem;
+}
+.active > svg {
+    fill: var(--title)
+}
+.active::after {
+    content: '';
+    position: absolute;
+    width: 12px;
+    transform: translateY(-120%);
+    left: -3.5rem;
+    height: 50%;
+    border-radius: 5px;
+    background: var(--title);
+    transition: all 0.2s;
+}
