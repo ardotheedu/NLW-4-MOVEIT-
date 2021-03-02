@@ -108,3 +108,23 @@
 }
 
 
+
+/* Darmk mode */
+
+
+.challengeBoxContainerDark {
+    background: #2c2c2c;
+    color: var(--white);
+    
+}
+
+
+.challengeBoxContainerDark .challengeActive footer button {
+    background: var(--title);
+    border: 1px solid #454547;
+    
+}
+
+.challengeBoxContainerDark .challengeActive header {
+    border-bottom: 1px solid #454547;
+}

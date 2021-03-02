@@ -40,3 +40,9 @@
     background: var(--title);
     transition: all 0.2s;
 }
+
+/* Dark mmode */
+.containerDark aside{
+    background: #2c2c2c;
+}
+

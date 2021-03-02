@@ -17,3 +17,12 @@
 .completedChanllengesContainer span:last-child{
     font-size: 1.5rem;
 }
+
+/* Dark */
+
+.completedChallengesContainerDark {
+    border-bottom: 1px solid #fff;
+}
+.completedChallengesContainerDark span {
+    color: #fff;
+}

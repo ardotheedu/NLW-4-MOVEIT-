@@ -16,10 +16,10 @@
     align-content: center;
 }
 
-  
-
+.dark {
+    display: flex;
+    background: #121212;
+}
 .page {
     display: flex;
 }
-
-

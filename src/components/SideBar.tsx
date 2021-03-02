@@ -4,11 +4,15 @@ import styles from '../styles/components/SideBar.module.css'
 import {BiHomeAlt, BiAward} from 'react-icons/bi'
 
 import Link from 'next/link';
+import { useContext } from 'react';
+import { ThemeContext } from '../contexts/ThemeContext';
 
 export function SideBar() {
     const router = useRouter();
+    const { theme } = useContext(ThemeContext);
+
     return (
-        <div className={styles.container}>
+        <div className={theme ==='dark' ? `${styles.containerDark} ${styles.container}` : styles.container}>
             <aside>
                     <header>
                         <img src="/icons/logo.svg" alt="move.it logo"/>
