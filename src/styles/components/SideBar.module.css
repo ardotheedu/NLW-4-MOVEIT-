@@ -46,3 +46,13 @@
     background: #2c2c2c;
 }
 
+.containerDark aside main a > svg {
+    fill: rgba(255, 255, 255, 0.6);
+}
+
+.containerDark .active > svg {
+    fill: var(--white)
+}
+.containerDark .active::after {
+    background: var(--white)
+}

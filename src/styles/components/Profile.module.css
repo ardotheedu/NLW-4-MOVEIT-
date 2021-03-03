@@ -27,3 +27,13 @@
 .profileContainer div p img{
     margin-right: 0.5rem; 
 }
+
+/* Dark mode */
+
+.profileContainerDark div strong {
+    color: var(--white)
+}
+
+.profileContainerDark div p {
+    color: rgba(255, 255, 255, 0.6);
+}

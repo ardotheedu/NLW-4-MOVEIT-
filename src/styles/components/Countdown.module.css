@@ -76,22 +76,6 @@
 }
 
 
-.countDownButtonDark:disabled {
-    background: var(--title);
-    color: var(--white);
-    
-}
-
-.countDownButtonActiveDark {
-    background: var(--title);
-    color: var(--white);
-}
-
-.countDownButtonActiveDark:not(:disabled):hover {
-    background: var(--red);
-    color: var(--white);
-}
-
 /* Dark mode */
 
 .countDownContainerDark {

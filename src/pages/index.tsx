@@ -27,7 +27,6 @@ interface HomeProps {
 export default function Home(props: HomeProps) {
   const {theme} = useContext(ThemeContext)
 
-  console.log(theme)
   
   return (
 
