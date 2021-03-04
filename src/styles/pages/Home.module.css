@@ -1,25 +1,96 @@
 .container {
     height: 100vh;
-    max-width: 992px;
+    background: #5765DB;
+
     margin: 0 auto;
     padding: 0.5rem 2rem;
   
     display: flex;
     flex-direction: column;
-}
-
-.container  section {
     flex: 1;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6.25rem;
-    align-content: center;
 }
 
-.dark {
-    display: flex;
-    background: #121212;
+.imageBackgroung {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
-.page {
+
+.container section > img {
+    width: 22.5rem;
+    height: 4.75rem;
+    transform: translateY(-75%);
+}
+
+.container section {
+    margin: auto;
+}
+
+.loginBox {
+    transform: translateY(23%)
+}
+
+.container section h3 {
+    font-family: Rajdhani, sans-serif;
+    font-size: 2.5rem;
+    color: var(--white);
+    font-weight: 600;
+
+}
+
+.container section p {
+    width: 19.875rem;
+    height: 3.75rem;
+    font-family: Rajdhani, sans-serif;
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 600;
+    opacity: 0.6;
+    margin: 1.35rem 0;
+}
+.container section p > svg { 
+    margin-right: 10px;
+}
+.hintIcon {
     display: flex;
+    align-items: center;
+
+}
+
+.hintIcon p {
+    margin-left: 1rem;
+} 
+
+.continue {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.continue input {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: none;
+    color:rgba(255, 255, 255, 0.6);
+    background-image: linear-gradient(to right, #4953B8, #5965E0);  
+    padding: 1rem;  
+}
+
+.continue input::placeholder {
+    color: rgba(255, 255, 255, 0.6)
+} 
+
+
+.continue button {
+    background: var(--blue-dark);
+    border: 0;
+    padding: 16px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.continue .filled{
+    background: var(--green)
 }

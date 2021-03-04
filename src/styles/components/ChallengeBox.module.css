@@ -119,7 +119,7 @@
 }
 
 
-.challengeBoxContainerDark .challengeActive footer button {
+.challengeBoxContainerDark .chanllengeNotActive footer button {
     background: var(--title);
     border: 1px solid #454547;
     

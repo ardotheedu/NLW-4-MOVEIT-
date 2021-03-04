@@ -18,12 +18,12 @@ export function SideBar() {
                     </header>
 
                     <main>
-                    {router.pathname === '/' ? (
-                        <a href="/" className={styles.active}>
+                    {router.pathname === '/dashboard' ? (
+                        <a href="/dashboard" className={styles.active}>
                             <BiHomeAlt />
                         </a>
                     ) : (
-                        <a href="/" >
+                        <a href="/dashboard" >
                             <BiHomeAlt />
                         </a>
                     )}

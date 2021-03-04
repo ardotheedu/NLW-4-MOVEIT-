@@ -1,77 +1,67 @@
-import Head from 'next/head'
-import { GetServerSideProps } from 'next'
+import Router from 'next/router';
+import styles from '../styles/pages/Home.module.css';
+import axios from 'axios';
 
+import { FaGithub } from 'react-icons/fa';
+import { AiOutlineArrowRight } from 'react-icons/ai';
+import { useEffect, useState } from 'react';
 
-import {ExperienceBar} from '../components/ExperienceBar'
-import { Profile } from '../components/profile'
-import { CompletedChallenges } from '../components/CompletedChallenges'
-import { Countdown } from '../components/Countdown'
-import { CountdownProvider } from '../contexts/CountdownContext'
-import { ChallengeBox } from '../components/ChallengeBox'
+export default function Home() {
+  const [userName, setUserName] = useState('');
 
+  async function handleNavigateToLogged() {
+    const { name, avatar_url } = (await axios.get(`https://api.github.com/users/${userName}`)).data;
 
-import styles from '../styles/pages/Home.module.css'
-import { ChallengesProvider } from '../contexts/ChallengesContext'
-
-import { SideBar } from '../components/SideBar'
-import { ToggleButton } from '../components/ToggleButton'
-import { useContext } from 'react'
-import { ThemeContext, ThemeProvider } from '../contexts/ThemeContext'
-
-
-interface HomeProps {
-  level: number,
-  currentExperience: number,
-  challengeCompleted: number
-}
-export default function Home(props: HomeProps) {
-  const {theme} = useContext(ThemeContext)
-
-  
-  return (
-
-      <ChallengesProvider
-        level={props.level}
-        currentExperience={props.currentExperience}
-        challengeCompleted={props.challengeCompleted}
-      > 
-        <div className={theme === 'dark' ? `${styles.dark}` : styles.page}>
-              <SideBar />
-              <ToggleButton />
-              <div className={styles.container}> 
-                <Head>
-                  <title>Inicio | move.it</title>
-                </Head>
-                <ExperienceBar />
-                <CountdownProvider>
-                  <section>
-                    <div>
-                      <Profile />
-                      <CompletedChallenges />
-                      <Countdown />
-                    </div>
-                    <div>
-                      <ChallengeBox />
-                    </div>
-                  </section>
-                </CountdownProvider>
-              </div>
-        </div>
+    if(name && avatar_url) {
+      Router.push('/dashboard');
+      sessionStorage.setItem('name', name);
+      sessionStorage.setItem('avatar_url', avatar_url);
       
-      </ChallengesProvider>
-  )
-}
-
-
-export const getServerSideProps: GetServerSideProps = async (ctx) => {
-  const { level, currentExperience, challengeCompleted } = ctx.req.cookies
-
-
-  return {
-    props: {
-      level: Number(level),
-      currentExperience: Number(currentExperience),
-      challengeCompleted: Number(challengeCompleted)
     }
   }
+
+  return (
+    <div className={styles.container}>
+      <div>
+        <img src="icons/Simbolo.svg" width="50%" className={styles.imageBackgroung}/>
+      </div>
+      <section>
+        <img src="logo-white.svg" />
+        <div className={styles.loginBox}>
+          <h3>Bem-vindo</h3>
+          <p className={styles.hintIcon}>
+            <FaGithub size={40} color="#ddd"/>
+            Faça login com seu GitHub <br /> para começar
+          </p>
+          
+          <div className={styles.continue}>
+            <input 
+              required
+              placeholder="Digite seu username"
+              value={userName}
+              onChange={e => setUserName(e.target.value)}
+            />
+            {userName ? (
+              <button
+                type="button"
+                onClick={handleNavigateToLogged}
+                className={styles.filled}
+              >
+                <AiOutlineArrowRight size={25} color="#fff" />
+              </button>
+            ) : (
+              <button
+                type="button"
+                onClick={handleNavigateToLogged}
+              >
+                <AiOutlineArrowRight size={25} color="#fff" />
+              </button>
+            )}
+
+          </div>
+        </div>
+      </section>
+      
+    </div>
+  );
 }
