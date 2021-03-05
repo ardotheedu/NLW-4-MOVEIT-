@@ -1,13 +1,13 @@
 import styles from '../styles/components/Profile.module.css'
 import { ChallengesContext } from '../contexts/ChallengesContext'
-import { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 export function Profile() {
     const { level } = useContext(ChallengesContext)
     const { theme } = useContext(ThemeContext);
     const [name, setName] = useState('');
     const [avatarUrl, setAvatarUrl] = useState('');
-    
+
     useEffect(() => { 
         setName(sessionStorage.getItem('name'))
         setAvatarUrl(sessionStorage.getItem('avatar_url'))
