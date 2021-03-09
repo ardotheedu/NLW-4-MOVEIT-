@@ -29,7 +29,7 @@ The move.it it's an app which combine the Pomodoro tecnique and exercise for tho
 
 ## Demo
 
-Here is a working live demo: https://moveit-next-5jebfizrm-ardotheedu.vercel.app
+Here is a working live demo: https://moveit-next-alpha-silk.vercel.app
 
 ## Features
 
