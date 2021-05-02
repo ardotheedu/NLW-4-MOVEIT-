@@ -1,23 +1,36 @@
 .container {
-    height: 100vh;
     background: #5765DB;
-
-    margin: 0 auto;
-    padding: 0.5rem 2rem;
-  
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6.25rem;
+    height: 100vh;
 }
-
 .imageBackgroung {
-    position: absolute;
-    top: 0;
-    left: 0;
+    width: 0;
 }
+.container section {
+    margin: 70% 0;
+}
+@media (min-width: 700px) {
+    .imageBackgroung {
+        width: 49vw;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .container section {
+        margin: auto;
+    }
+    .container {
+        margin: 0 auto;
+        padding: 0.5rem 2rem;
+      
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 6.25rem;
+    }
+}
+
 
 .container section > img {
     width: 22.5rem;
@@ -25,9 +38,7 @@
     transform: translateY(-75%);
 }
 
-.container section {
-    margin: auto;
-}
+
 
 .loginBox {
     transform: translateY(23%)

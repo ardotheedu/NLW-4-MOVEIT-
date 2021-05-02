@@ -10,20 +10,34 @@ export function ToggleButton(){
   const [isDarkMode, setIsDarkMode] = useState(false);
   const { theme, setTheme } = useContext(ThemeContext);
 
-  useEffect(() => {
-    if(isDarkMode) {
-      setTheme('dark');
-
+  const toggleTheme = () => {
+    if (isDarkMode) {
+      setIsDarkMode(false);
+      localStorage.setItem('theme', 'light')
+      setTheme('light')
+    } else {
+      setIsDarkMode(true);
+      localStorage.setItem('theme', 'dark')
+      setTheme('dark')
     }
-    else {
+  };
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem('theme');
+    if (localTheme) {
+        setTheme(localTheme);
+    } else {
       setTheme('light');
+    }
+    if (localTheme === 'dark') {
+      setIsDarkMode(true)
     }
   }, [isDarkMode, theme]);
 
   return (
     <header className={styles.darkModeToggle}>
       <DarkModeToggle
-        onChange={setIsDarkMode}
+        onChange={toggleTheme}
         checked={isDarkMode}
         size={60}
         

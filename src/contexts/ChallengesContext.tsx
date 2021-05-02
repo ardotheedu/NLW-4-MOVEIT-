@@ -35,9 +35,9 @@ interface ChallengesProviderProps {
 
 
 export function ChallengesProvider({children, ...rest}: ChallengesProviderProps) {
-    const [level, setLevel] = useState(rest.level)
-    const [currentExperience, setCurrentExperience] = useState(rest.currentExperience)
-    const [challengeCompleted, setChallengeCompleted] = useState(rest.challengeCompleted)
+    const [level, setLevel] = useState(rest.level ?? 1)
+    const [currentExperience, setCurrentExperience] = useState(rest.currentExperience ?? 0)
+    const [challengeCompleted, setChallengeCompleted] = useState(rest.challengeCompleted ?? 0)
     const [isLevelUpModalOpen, setIsLevelUpdateModalOpen] = useState(false)
 
     const [activeChallenge, setActiveChallenge] = useState(null)

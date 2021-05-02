@@ -6,17 +6,21 @@ import { FaGithub } from 'react-icons/fa';
 import { AiOutlineArrowRight } from 'react-icons/ai';
 import { useEffect, useState } from 'react';
 
+interface User {
+  name: string;
+  avatar_url: string
+}
 export default function Home() {
   const [userName, setUserName] = useState('');
 
   async function handleNavigateToLogged() {
-    const { name, avatar_url } = (await axios.get(`https://api.github.com/users/${userName}`)).data;
+    const response = await axios.get<User>(`https://api.github.com/users/${userName}`)
 
-    if(name && avatar_url) {
-      Router.push('/dashboard');
-      sessionStorage.setItem('name', name);
-      sessionStorage.setItem('avatar_url', avatar_url);
+    if(response.data) {
+      sessionStorage.setItem('name', response.data.name);
+      sessionStorage.setItem('avatar_url', response.data.avatar_url);
       
+      Router.push('/dashboard');
     }
   }
 

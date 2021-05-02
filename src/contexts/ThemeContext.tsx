@@ -15,11 +15,7 @@ export const ThemeContext = createContext({} as ThemeContextData);
 
 export function ThemeProvider({ children }: ThemeProviderProps) {
     const [theme, setTheme] = useState('light');
-
-    useEffect(() => {
-        Cookie.set("currentTheme", theme)
-    }, []);
-
+    
     return (
         <ThemeContext.Provider value={{ theme, setTheme }}> 
             {children}
