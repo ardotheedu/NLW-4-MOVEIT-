@@ -11,7 +11,7 @@ export default function Ranking() {
   return (
         <div className={theme === 'dark' ? `${styles.dark}` : styles.page}>
               <SideBar />
-              <ToggleButton />
+
               <div className={styles.container}> 
                 <section>
                     <h1>Sem ranking por enquanto</h1>
